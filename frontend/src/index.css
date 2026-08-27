@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+  background: #111827;
+  color: white;
+  padding: 22px 8%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo h1 {
+  font-size: 24px;
+}
+
+.logo p {
+  margin-top: 4px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+/* Main */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 0;
+}
+
+/* Hero */
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #64748b;
+  font-size: 17px;
+}
+
+/* Input */
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card-title h3 {
+  font-size: 19px;
+}
+
+/* Upload */
+
+.upload-box {
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: #64748b;
+  text-align: center;
+  padding: 20px;
+}
+
+.upload-box:hover {
+  border-color: #64748b;
+}
+
+.upload-box strong {
+  color: #1f2937;
+}
+
+.upload-box input {
+  display: none;
+}
+
+/* Textarea */
+
+textarea {
+  width: 100%;
+  height: 230px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 15px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #475569;
+}
+
+/* Error */
+
+.error {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: #fee2e2;
+  color: #991b1b;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Button */
+
+.screen-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  margin-top: 25px;
+
+  padding: 16px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #111827;
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.screen-button:hover {
+  background: #1f2937;
+}
+
+.screen-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Results */
+
+.results {
+  margin-top: 50px;
+}
+
+.results > h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Score */
+
+.score-card {
+  background: white;
+  border-radius: 14px;
+  padding: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 25px;
+}
+
+.score-card p {
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.score-card strong {
+  font-size: 50px;
+}
+
+.score-circle {
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 8px solid #111827;
+
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Result Cards */
+
+.result-card {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.result-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 18px;
+}
+
+.result-title h3 {
+  font-size: 20px;
+}
+
+.result-card ul {
+  padding-left: 25px;
+}
+
+.result-card li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.reasoning {
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* Loading */
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .score-card {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+}
