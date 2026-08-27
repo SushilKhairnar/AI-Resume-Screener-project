@@ -55,7 +55,7 @@ function App() {
       formData.append("job_description", jobDescription);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/api/screen",
+        "https://ai-resume-screener-project.onrender.com/api/screen",
         {
           method: "POST",
           body: formData,
